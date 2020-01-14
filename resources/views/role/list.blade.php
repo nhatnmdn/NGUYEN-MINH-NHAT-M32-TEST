@@ -28,29 +28,19 @@
         </div>
     @endif
 
-    <a href="" class="btn btn-success">Create Role</a>
+    <a href="{{route('user.list')}}" class="btn btn-primary">User List</a>
 
-    <div class="form-group">
-        <form action="" method="get">
-            <label>Post Name</label>
-            <input type="text" class="form-control" name="search" value="">
-            <input type="hidden" name="searchKey" value="post_title">
-            <input type="submit" value="Search" class="btn btn-success">
-        </form>
-    </div>
+
 
     <table class="table table-bordered table-striped">
         <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th colspan="2" class="text-center">Action</th>
+            <th class="text-center">Role ID</th>
+            <th class="text-center">Role Name</th>
         </tr>
         @foreach($roles as $key => $role)
             <tr>
-                <td>{{++$key}}</td>
-                <td>{{$role->name}}</td>
-                <td><a href="" class="btn btn-primary">Edit</a></td>
-                <td><a href="" class="btn btn-primary">Delete</a></td>
+                <td class="text-center"><a href="{{route('role.list-detail', $role->id)}}">{{$role->id}}</a></td>
+                <td class="text-center"><a href="{{route('role.list-detail', $role->id)}}">{{$role->name}}</a></td>
             </tr>
         @endforeach
     </table>

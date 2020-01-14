@@ -17,11 +17,10 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('email');
             $table->string('password');
-            $table->date('birthday');
+            $table->dateTime('birthday');
             $table->unsignedBigInteger('role_id');
-
-            $table->foreign('role_id')->references('id')->on('roles');
             $table->timestamps();
+            $table->foreign('role_id')->references('id')->on('roles');
         });
     }
 
@@ -32,6 +31,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users1');
+        Schema::dropIfExists('users');
     }
 }

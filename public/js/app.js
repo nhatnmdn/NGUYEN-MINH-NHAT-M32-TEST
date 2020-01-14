@@ -8963,16 +8963,16 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var users = [
-     *   { 'user1': 'barney',  'active': true },
-     *   { 'user1': 'fred',    'active': false },
-     *   { 'user1': 'pebbles', 'active': false }
+     *   { 'user': 'barney',  'active': true },
+     *   { 'user': 'fred',    'active': false },
+     *   { 'user': 'pebbles', 'active': false }
      * ];
      *
      * _.dropRightWhile(users, function(o) { return !o.active; });
      * // => objects for ['barney']
      *
      * // The `_.matches` iteratee shorthand.
-     * _.dropRightWhile(users, { 'user1': 'pebbles', 'active': false });
+     * _.dropRightWhile(users, { 'user': 'pebbles', 'active': false });
      * // => objects for ['barney', 'fred']
      *
      * // The `_.matchesProperty` iteratee shorthand.
@@ -9004,16 +9004,16 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var users = [
-     *   { 'user1': 'barney',  'active': false },
-     *   { 'user1': 'fred',    'active': false },
-     *   { 'user1': 'pebbles', 'active': true }
+     *   { 'user': 'barney',  'active': false },
+     *   { 'user': 'fred',    'active': false },
+     *   { 'user': 'pebbles', 'active': true }
      * ];
      *
      * _.dropWhile(users, function(o) { return !o.active; });
      * // => objects for ['pebbles']
      *
      * // The `_.matches` iteratee shorthand.
-     * _.dropWhile(users, { 'user1': 'barney', 'active': false });
+     * _.dropWhile(users, { 'user': 'barney', 'active': false });
      * // => objects for ['fred', 'pebbles']
      *
      * // The `_.matchesProperty` iteratee shorthand.
@@ -9086,16 +9086,16 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var users = [
-     *   { 'user1': 'barney',  'active': false },
-     *   { 'user1': 'fred',    'active': false },
-     *   { 'user1': 'pebbles', 'active': true }
+     *   { 'user': 'barney',  'active': false },
+     *   { 'user': 'fred',    'active': false },
+     *   { 'user': 'pebbles', 'active': true }
      * ];
      *
-     * _.findIndex(users, function(o) { return o.user1 == 'barney'; });
+     * _.findIndex(users, function(o) { return o.user == 'barney'; });
      * // => 0
      *
      * // The `_.matches` iteratee shorthand.
-     * _.findIndex(users, { 'user1': 'fred', 'active': false });
+     * _.findIndex(users, { 'user': 'fred', 'active': false });
      * // => 1
      *
      * // The `_.matchesProperty` iteratee shorthand.
@@ -9133,16 +9133,16 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var users = [
-     *   { 'user1': 'barney',  'active': true },
-     *   { 'user1': 'fred',    'active': false },
-     *   { 'user1': 'pebbles', 'active': false }
+     *   { 'user': 'barney',  'active': true },
+     *   { 'user': 'fred',    'active': false },
+     *   { 'user': 'pebbles', 'active': false }
      * ];
      *
-     * _.findLastIndex(users, function(o) { return o.user1 == 'pebbles'; });
+     * _.findLastIndex(users, function(o) { return o.user == 'pebbles'; });
      * // => 2
      *
      * // The `_.matches` iteratee shorthand.
-     * _.findLastIndex(users, { 'user1': 'barney', 'active': true });
+     * _.findLastIndex(users, { 'user': 'barney', 'active': true });
      * // => 0
      *
      * // The `_.matchesProperty` iteratee shorthand.
@@ -10084,16 +10084,16 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var users = [
-     *   { 'user1': 'barney',  'active': true },
-     *   { 'user1': 'fred',    'active': false },
-     *   { 'user1': 'pebbles', 'active': false }
+     *   { 'user': 'barney',  'active': true },
+     *   { 'user': 'fred',    'active': false },
+     *   { 'user': 'pebbles', 'active': false }
      * ];
      *
      * _.takeRightWhile(users, function(o) { return !o.active; });
      * // => objects for ['fred', 'pebbles']
      *
      * // The `_.matches` iteratee shorthand.
-     * _.takeRightWhile(users, { 'user1': 'pebbles', 'active': false });
+     * _.takeRightWhile(users, { 'user': 'pebbles', 'active': false });
      * // => objects for ['pebbles']
      *
      * // The `_.matchesProperty` iteratee shorthand.
@@ -10125,16 +10125,16 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var users = [
-     *   { 'user1': 'barney',  'active': false },
-     *   { 'user1': 'fred',    'active': false },
-     *   { 'user1': 'pebbles', 'active': true }
+     *   { 'user': 'barney',  'active': false },
+     *   { 'user': 'fred',    'active': false },
+     *   { 'user': 'pebbles', 'active': true }
      * ];
      *
      * _.takeWhile(users, function(o) { return !o.active; });
      * // => objects for ['barney', 'fred']
      *
      * // The `_.matches` iteratee shorthand.
-     * _.takeWhile(users, { 'user1': 'barney', 'active': false });
+     * _.takeWhile(users, { 'user': 'barney', 'active': false });
      * // => objects for ['barney']
      *
      * // The `_.matchesProperty` iteratee shorthand.
@@ -10579,16 +10579,16 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var users = [
-     *   { 'user1': 'barney',  'age': 36 },
-     *   { 'user1': 'fred',    'age': 40 },
-     *   { 'user1': 'pebbles', 'age': 1 }
+     *   { 'user': 'barney',  'age': 36 },
+     *   { 'user': 'fred',    'age': 40 },
+     *   { 'user': 'pebbles', 'age': 1 }
      * ];
      *
      * var youngest = _
      *   .chain(users)
      *   .sortBy('age')
      *   .map(function(o) {
-     *     return o.user1 + ' is ' + o.age;
+     *     return o.user + ' is ' + o.age;
      *   })
      *   .head()
      *   .value();
@@ -10706,21 +10706,21 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var users = [
-     *   { 'user1': 'barney', 'age': 36 },
-     *   { 'user1': 'fred',   'age': 40 }
+     *   { 'user': 'barney', 'age': 36 },
+     *   { 'user': 'fred',   'age': 40 }
      * ];
      *
      * // A sequence without explicit chaining.
      * _(users).head();
-     * // => { 'user1': 'barney', 'age': 36 }
+     * // => { 'user': 'barney', 'age': 36 }
      *
      * // A sequence with explicit chaining.
      * _(users)
      *   .chain()
      *   .head()
-     *   .pick('user1')
+     *   .pick('user')
      *   .value();
-     * // => { 'user1': 'barney' }
+     * // => { 'user': 'barney' }
      */
     function wrapperChain() {
       return chain(this);
@@ -10967,12 +10967,12 @@ module.exports = function isBuffer (obj) {
      * // => false
      *
      * var users = [
-     *   { 'user1': 'barney', 'age': 36, 'active': false },
-     *   { 'user1': 'fred',   'age': 40, 'active': false }
+     *   { 'user': 'barney', 'age': 36, 'active': false },
+     *   { 'user': 'fred',   'age': 40, 'active': false }
      * ];
      *
      * // The `_.matches` iteratee shorthand.
-     * _.every(users, { 'user1': 'barney', 'active': false });
+     * _.every(users, { 'user': 'barney', 'active': false });
      * // => false
      *
      * // The `_.matchesProperty` iteratee shorthand.
@@ -11009,8 +11009,8 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var users = [
-     *   { 'user1': 'barney', 'age': 36, 'active': true },
-     *   { 'user1': 'fred',   'age': 40, 'active': false }
+     *   { 'user': 'barney', 'age': 36, 'active': true },
+     *   { 'user': 'fred',   'age': 40, 'active': false }
      * ];
      *
      * _.filter(users, function(o) { return !o.active; });
@@ -11049,9 +11049,9 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var users = [
-     *   { 'user1': 'barney',  'age': 36, 'active': true },
-     *   { 'user1': 'fred',    'age': 40, 'active': false },
-     *   { 'user1': 'pebbles', 'age': 1,  'active': true }
+     *   { 'user': 'barney',  'age': 36, 'active': true },
+     *   { 'user': 'fred',    'age': 40, 'active': false },
+     *   { 'user': 'pebbles', 'age': 1,  'active': true }
      * ];
      *
      * _.find(users, function(o) { return o.age < 40; });
@@ -11401,12 +11401,12 @@ module.exports = function isBuffer (obj) {
      * // => [16, 64] (iteration order is not guaranteed)
      *
      * var users = [
-     *   { 'user1': 'barney' },
-     *   { 'user1': 'fred' }
+     *   { 'user': 'barney' },
+     *   { 'user': 'fred' }
      * ];
      *
      * // The `_.property` iteratee shorthand.
-     * _.map(users, 'user1');
+     * _.map(users, 'user');
      * // => ['barney', 'fred']
      */
     function map(collection, iteratee) {
@@ -11433,14 +11433,14 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var users = [
-     *   { 'user1': 'fred',   'age': 48 },
-     *   { 'user1': 'barney', 'age': 34 },
-     *   { 'user1': 'fred',   'age': 40 },
-     *   { 'user1': 'barney', 'age': 36 }
+     *   { 'user': 'fred',   'age': 48 },
+     *   { 'user': 'barney', 'age': 34 },
+     *   { 'user': 'fred',   'age': 40 },
+     *   { 'user': 'barney', 'age': 36 }
      * ];
      *
-     * // Sort by `user1` in ascending order and by `age` in descending order.
-     * _.orderBy(users, ['user1', 'age'], ['asc', 'desc']);
+     * // Sort by `user` in ascending order and by `age` in descending order.
+     * _.orderBy(users, ['user', 'age'], ['asc', 'desc']);
      * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 40]]
      */
     function orderBy(collection, iteratees, orders, guard) {
@@ -11473,9 +11473,9 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var users = [
-     *   { 'user1': 'barney',  'age': 36, 'active': false },
-     *   { 'user1': 'fred',    'age': 40, 'active': true },
-     *   { 'user1': 'pebbles', 'age': 1,  'active': false }
+     *   { 'user': 'barney',  'age': 36, 'active': false },
+     *   { 'user': 'fred',    'age': 40, 'active': true },
+     *   { 'user': 'pebbles', 'age': 1,  'active': false }
      * ];
      *
      * _.partition(users, function(o) { return o.active; });
@@ -11585,8 +11585,8 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var users = [
-     *   { 'user1': 'barney', 'age': 36, 'active': false },
-     *   { 'user1': 'fred',   'age': 40, 'active': true }
+     *   { 'user': 'barney', 'age': 36, 'active': false },
+     *   { 'user': 'fred',   'age': 40, 'active': true }
      * ];
      *
      * _.reject(users, function(o) { return !o.active; });
@@ -11733,12 +11733,12 @@ module.exports = function isBuffer (obj) {
      * // => true
      *
      * var users = [
-     *   { 'user1': 'barney', 'active': true },
-     *   { 'user1': 'fred',   'active': false }
+     *   { 'user': 'barney', 'active': true },
+     *   { 'user': 'fred',   'active': false }
      * ];
      *
      * // The `_.matches` iteratee shorthand.
-     * _.some(users, { 'user1': 'barney', 'active': false });
+     * _.some(users, { 'user': 'barney', 'active': false });
      * // => false
      *
      * // The `_.matchesProperty` iteratee shorthand.
@@ -11774,16 +11774,16 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var users = [
-     *   { 'user1': 'fred',   'age': 48 },
-     *   { 'user1': 'barney', 'age': 36 },
-     *   { 'user1': 'fred',   'age': 40 },
-     *   { 'user1': 'barney', 'age': 34 }
+     *   { 'user': 'fred',   'age': 48 },
+     *   { 'user': 'barney', 'age': 36 },
+     *   { 'user': 'fred',   'age': 40 },
+     *   { 'user': 'barney', 'age': 34 }
      * ];
      *
-     * _.sortBy(users, [function(o) { return o.user1; }]);
+     * _.sortBy(users, [function(o) { return o.user; }]);
      * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 40]]
      *
-     * _.sortBy(users, ['user1', 'age']);
+     * _.sortBy(users, ['user', 'age']);
      * // => objects for [['barney', 34], ['barney', 36], ['fred', 40], ['fred', 48]]
      */
     var sortBy = baseRest(function(collection, iteratees) {
@@ -11937,10 +11937,10 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * function greet(greeting, punctuation) {
-     *   return greeting + ' ' + this.user1 + punctuation;
+     *   return greeting + ' ' + this.user + punctuation;
      * }
      *
-     * var object = { 'user1': 'fred' };
+     * var object = { 'user': 'fred' };
      *
      * var bound = _.bind(greet, object, 'hi');
      * bound('!');
@@ -11983,9 +11983,9 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var object = {
-     *   'user1': 'fred',
+     *   'user': 'fred',
      *   'greet': function(greeting, punctuation) {
-     *     return greeting + ' ' + this.user1 + punctuation;
+     *     return greeting + ' ' + this.user + punctuation;
      *   }
      * };
      *
@@ -11994,7 +11994,7 @@ module.exports = function isBuffer (obj) {
      * // => 'hi fred!'
      *
      * object.greet = function(greeting, punctuation) {
-     *   return greeting + 'ya ' + this.user1 + punctuation;
+     *   return greeting + 'ya ' + this.user + punctuation;
      * };
      *
      * bound('!');
@@ -15242,8 +15242,8 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var users = {
-     *   'fred':    { 'user1': 'fred',    'age': 40 },
-     *   'pebbles': { 'user1': 'pebbles', 'age': 1 }
+     *   'fred':    { 'user': 'fred',    'age': 40 },
+     *   'pebbles': { 'user': 'pebbles', 'age': 1 }
      * };
      *
      * _.mapValues(users, function(o) { return o.age; });
@@ -16563,8 +16563,8 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * // Use the "interpolate" delimiter to create a compiled template.
-     * var compiled = _.template('hello <%= user1 %>!');
-     * compiled({ 'user1': 'fred' });
+     * var compiled = _.template('hello <%= user %>!');
+     * compiled({ 'user': 'fred' });
      * // => 'hello fred!'
      *
      * // Use the HTML "escape" delimiter to escape data property values.
@@ -16573,19 +16573,19 @@ module.exports = function isBuffer (obj) {
      * // => '<b>&lt;script&gt;</b>'
      *
      * // Use the "evaluate" delimiter to execute JavaScript and generate HTML.
-     * var compiled = _.template('<% _.forEach(users, function(user1) { %><li><%- user1 %></li><% }); %>');
+     * var compiled = _.template('<% _.forEach(users, function(user) { %><li><%- user %></li><% }); %>');
      * compiled({ 'users': ['fred', 'barney'] });
      * // => '<li>fred</li><li>barney</li>'
      *
      * // Use the internal `print` function in "evaluate" delimiters.
-     * var compiled = _.template('<% print("hello " + user1); %>!');
-     * compiled({ 'user1': 'barney' });
+     * var compiled = _.template('<% print("hello " + user); %>!');
+     * compiled({ 'user': 'barney' });
      * // => 'hello barney!'
      *
      * // Use the ES template literal delimiter as an "interpolate" delimiter.
      * // Disable support by replacing the "interpolate" delimiter.
-     * var compiled = _.template('hello ${ user1 }!');
-     * compiled({ 'user1': 'pebbles' });
+     * var compiled = _.template('hello ${ user }!');
+     * compiled({ 'user': 'pebbles' });
      * // => 'hello pebbles!'
      *
      * // Use backslashes to treat delimiters as plain text.
@@ -16594,29 +16594,29 @@ module.exports = function isBuffer (obj) {
      * // => '<%- value %>'
      *
      * // Use the `imports` option to import `jQuery` as `jq`.
-     * var text = '<% jq.each(users, function(user1) { %><li><%- user1 %></li><% }); %>';
+     * var text = '<% jq.each(users, function(user) { %><li><%- user %></li><% }); %>';
      * var compiled = _.template(text, { 'imports': { 'jq': jQuery } });
      * compiled({ 'users': ['fred', 'barney'] });
      * // => '<li>fred</li><li>barney</li>'
      *
      * // Use the `sourceURL` option to specify a custom sourceURL for the template.
-     * var compiled = _.template('hello <%= user1 %>!', { 'sourceURL': '/basic/greeting.jst' });
+     * var compiled = _.template('hello <%= user %>!', { 'sourceURL': '/basic/greeting.jst' });
      * compiled(data);
      * // => Find the source of "greeting.jst" under the Sources tab or Resources panel of the web inspector.
      *
      * // Use the `variable` option to ensure a with-statement isn't used in the compiled template.
-     * var compiled = _.template('hi <%= data.user1 %>!', { 'variable': 'data' });
+     * var compiled = _.template('hi <%= data.user %>!', { 'variable': 'data' });
      * compiled.source;
      * // => function(data) {
      * //   var __t, __p = '';
-     * //   __p += 'hi ' + ((__t = ( data.user1 )) == null ? '' : __t) + '!';
+     * //   __p += 'hi ' + ((__t = ( data.user )) == null ? '' : __t) + '!';
      * //   return __p;
      * // }
      *
      * // Use custom template delimiters.
      * _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
-     * var compiled = _.template('hello {{ user1 }}!');
-     * compiled({ 'user1': 'mustache' });
+     * var compiled = _.template('hello {{ user }}!');
+     * compiled({ 'user': 'mustache' });
      * // => 'hello mustache!'
      *
      * // Use the `source` property to inline compiled templates for meaningful
@@ -17362,20 +17362,20 @@ module.exports = function isBuffer (obj) {
      * @example
      *
      * var users = [
-     *   { 'user1': 'barney', 'age': 36, 'active': true },
-     *   { 'user1': 'fred',   'age': 40, 'active': false }
+     *   { 'user': 'barney', 'age': 36, 'active': true },
+     *   { 'user': 'fred',   'age': 40, 'active': false }
      * ];
      *
      * // The `_.matches` iteratee shorthand.
-     * _.filter(users, _.iteratee({ 'user1': 'barney', 'active': true }));
-     * // => [{ 'user1': 'barney', 'age': 36, 'active': true }]
+     * _.filter(users, _.iteratee({ 'user': 'barney', 'active': true }));
+     * // => [{ 'user': 'barney', 'age': 36, 'active': true }]
      *
      * // The `_.matchesProperty` iteratee shorthand.
-     * _.filter(users, _.iteratee(['user1', 'fred']));
-     * // => [{ 'user1': 'fred', 'age': 40 }]
+     * _.filter(users, _.iteratee(['user', 'fred']));
+     * // => [{ 'user': 'fred', 'age': 40 }]
      *
      * // The `_.property` iteratee shorthand.
-     * _.map(users, _.iteratee('user1'));
+     * _.map(users, _.iteratee('user'));
      * // => ['barney', 'fred']
      *
      * // Create custom iteratee shorthands.
